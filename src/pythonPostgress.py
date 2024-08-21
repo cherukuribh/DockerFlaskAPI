@@ -37,7 +37,7 @@ csv_file_path = os.path.join(script_dir, '../data/customers.csv')
 df = pd.read_csv(csv_file_path)
 
 # Load the DataFrame into PostgreSQL
-table_name = 'customer_Muyiwa'  # Replace with the name of the table you want to create or append to
+table_name = 'customer_bharathi'  # Replace with the name of the table you want to create or append to
 df.to_sql(table_name, engine, if_exists='replace', index=False)  # Use 'append' if you want to add to an existing table
 
 print(f"Data successfully loaded into {table_name} table.")

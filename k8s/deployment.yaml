@@ -19,7 +19,7 @@ spec:
       - name: flask-api
         image: bharathi/flask-api:latest
         ports:
-        - containerPort: 5310
+        - containerPort: 5100
         env:
         - name: ENDPOINT
           value: "${env.ENDPOINT}"
