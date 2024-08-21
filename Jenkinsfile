@@ -57,6 +57,8 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'bharathi_hub', usernameVariable: 'DOCKER_HUB_USERNAME', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
                         sh 'echo ${DOCKER_HUB_PASSWORD} | docker login -u ${DOCKER_HUB_USERNAME} --password-stdin'
                     }
+                    def DOCKER_IMAGE = 'bharathi/flask-api:latest'
+
                     // Push the image
                     sh 'docker push ${DOCKER_IMAGE}'
                 }
