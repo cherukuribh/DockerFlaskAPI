@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         VENV_DIR = 'venv'
-        DOCKER_IMAGE = 'bharathi/flask-api:latest'
+        DOCKER_IMAGE = 'bharathi8415/flask-api:latest'
         FLASK_APP_PORT = '5100'
         SERVER_IP = '18.132.73.146' // Replace with your server's public IP
     }
@@ -57,7 +57,6 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'bharathi_hub', usernameVariable: 'DOCKER_HUB_USERNAME', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
                         sh 'echo ${DOCKER_HUB_PASSWORD} | docker login -u ${DOCKER_HUB_USERNAME} --password-stdin'
                     }
-                    def DOCKER_IMAGE = 'bharathi/flask-api:latest'
 
                     // Push the image
                     sh 'docker push ${DOCKER_IMAGE}'
