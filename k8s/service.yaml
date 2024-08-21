@@ -10,5 +10,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80           # The port the service will expose
-      targetPort: 5100   # The port the Flask API is running on inside the container
+      targetPort: 5150   # The port the Flask API is running on inside the container
   type: LoadBalancer     # Use LoadBalancer for external access to the service

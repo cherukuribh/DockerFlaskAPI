@@ -3,7 +3,7 @@ pipeline {
     environment {
         VENV_DIR = 'venv'
         DOCKER_IMAGE = 'bharathi8415/flask-api:latest'
-        FLASK_APP_PORT = '5100'
+        FLASK_APP_PORT = '5150'
         SERVER_IP = '18.132.73.146' // Replace with your server's public IP
     }
     stages {

@@ -13,10 +13,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Define environment variables for the Flask app
 ENV FLASK_APP=src/dbapi.py
 ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=5100
+ENV FLASK_RUN_PORT=5150
 
 # Expose the port that Flask will run on
-EXPOSE 5100
+EXPOSE 5150
 
 # Run the Flask app
 CMD ["flask", "run"]
