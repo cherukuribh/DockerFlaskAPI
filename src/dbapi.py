@@ -33,7 +33,7 @@ DATABASE = get_env_variable('DATABASE')
 engine = create_engine(f'{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{ENDPOINT}:{PORT}/{DATABASE}')
 
 # Specify the table name you want to read from
-table_name = 'customer_bharathi'  # Replace with your table name
+table_name = 'customer_Muyiwa'  # Replace with your table name
 
 
 @app.route('/data', methods=['GET'])

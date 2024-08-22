@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-api-deployment
-  namespace: default  # Ensure the correct namespace is specified or default if no specific namespace is required
+  namespace: default   # dev,prod or default# Ensure the correct namespace is specified or default if no specific namespace is required
   labels:
     app: flask-api
-spec:
+spec: #pod specification
   replicas: 2
   selector:
     matchLabels:
-      app: flask-api
+      app: flask-api # we will compare with service.yaml
   template:
     metadata:
       labels:
-        app: flask-api
+        app: flask-api 
     spec:
-      containers:
-      - name: flask-api
-        image: bharathi8415/flask-api:latest
+      containers: # container specification
+      - name: flask-api # container name
+        image: bharathi8415/flask-api:latest # if private repos, will give complete path
         ports:
-        - containerPort: 5150
+        - containerPort: 5150  
         env:
         - name: ENDPOINT
           value: "${env.ENDPOINT}"
