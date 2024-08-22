@@ -19,7 +19,7 @@ spec: #pod specification
       - name: flask-api # container name
         image: bharathi8415/flask-api:latest # if private repos, will give complete path
         ports:
-        - containerPort: 5150  
+        - containerPort: 5750  
         env:
         - name: ENDPOINT
           value: "${env.ENDPOINT}"
